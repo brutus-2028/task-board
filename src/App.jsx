@@ -1,7 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
+const STORAGE_KEY = 'task-board.tasks'
+
+// ローカルストレージから保存済みのタスクを読み込む（読めない・壊れている場合は空にする）
+const loadTasks = () => {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY))
+    return Array.isArray(saved) ? saved : []
+  } catch {
+    return []
+  }
+}
 
 function App() {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState(loadTasks)
+
+  // タスクが変わるたびにローカルストレージへ保存する
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks))
+    } catch {
+      // プライベートモードや容量超過で保存できない場合は無視する
+    }
+  }, [tasks])
   const [text, setText] = useState('')
 
   // 入力されたテキストでタスクを追加する（空白のみは無視）

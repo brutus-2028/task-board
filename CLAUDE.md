@@ -7,7 +7,7 @@
 - プロジェクト名: task-board
 - 内容: タスク管理ボードアプリケーション
 - 技術スタック: React 18 + Vite 5（JavaScript）
-- 構成: 状態は [src/App.jsx](src/App.jsx) の `useState` で管理（保存機能なし）、スタイルは [src/index.css](src/index.css)
+- 構成: 状態は [src/App.jsx](src/App.jsx) の `useState` で管理し、ローカルストレージ（キー: `task-board.tasks`）に保存、スタイルは [src/index.css](src/index.css)
 
 ## 開発コマンド
 
