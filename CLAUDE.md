@@ -6,16 +6,15 @@
 
 - プロジェクト名: task-board
 - 内容: タスク管理ボードアプリケーション
-- 技術スタック: 未定（決まり次第ここに追記する）
+- 技術スタック: React 18 + Vite 5（JavaScript）
+- 構成: 状態は [src/App.jsx](src/App.jsx) の `useState` で管理（保存機能なし）、スタイルは [src/index.css](src/index.css)
 
 ## 開発コマンド
 
-技術スタックが決まり次第、以下を追記する。
-
-- 依存関係のインストール:
-- 開発サーバーの起動:
-- テストの実行:
-- ビルド:
+- 依存関係のインストール: `npm install`
+- 開発サーバーの起動: `npm run dev`（http://localhost:5173）
+- テストの実行: 未導入
+- ビルド: `npm run build`
 
 ## コーディング規約
 
