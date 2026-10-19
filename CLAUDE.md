@@ -16,6 +16,12 @@
 - テストの実行: 未導入
 - ビルド: `npm run build`
 
+## デプロイ
+
+- GitHub Pages で公開: https://brutus-2028.github.io/task-board/
+- `main` へプッシュすると [.github/workflows/deploy.yml](.github/workflows/deploy.yml) が自動でビルド・デプロイする
+- [vite.config.js](vite.config.js) の `base` はビルド時のみ `/task-board/`。リポジトリ名を変えたらここも合わせる
+
 ## コーディング規約
 
 - 既存コードの命名規則・書き方・コメント量に合わせる
